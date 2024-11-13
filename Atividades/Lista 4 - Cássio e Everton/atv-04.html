@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Cassio e Everton</title>
+</head>
+<body>
+    <h1>Atividade 4</h1>
+    <input type="number" id="n1" min="0">
+    <button onclick="calc()">Calcular</button>
+    <hr>
+    <div class="result"></div>
+    <script>
+        function calc(){
+        var sal = Number(document.getElementById("n1").value)
+        if(sal < 2500){
+            sal += sal * 0.10
+        }else{
+            sal += sal * 0.08
+        }
+        document.querySelector(".result").innerHTML = "R$ " + sal.toFixed(2) }
+    </script>
+</body>
+</html>

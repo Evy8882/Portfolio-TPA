@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio TPA</title>
+</head>
+<body>
+    <style>
+        *{
+            font-size: 16pt;
+        }
+        .sel, button{
+            cursor: pointer;
+            transition: all 100ms;
+        }
+        .sel:hover{
+            color: red;
+        }
+    </style>
+    <script>
+        var name = prompt("Digite o seu nome:");
+        document.write(`<h2>Olá ${name}, o que deseja comprar? </h2>`)
+    </script>
+    <div class="sel" onclick="sel(1)">1. Roupa</div>
+    <div class="sel" onclick="sel(2)">2. Sapato</div>
+    <div class="sel" onclick="sel(3)">3. Acessórios</div>
+    <div class="sel" onclick="sel(4)">4. Sair</div>
+    <hr>
+    <div class="res"></div>
+    <hr>
+    <h2>Sua compra:</h2>
+    Roupa: <div class="roup"> </div><br>
+    Calçado: <div class="calc"> </div><br>
+    Acessório: <div class="aces"> </div><br>
+    <button onclick="comprar()">Comprar</button>
+    <script>
+        var roupa_p, sapato_p, acesso_p;
+        var carrinho = [];
+        var roupas = [["Camisa social", 40],["Calça jeans", 80],["Moletom", 100]]
+        var sapatos = [["Tenis", 60],["Sapato", 80],["Chinelo", 20]]
+        var acessorios = [["Relógio", 120],["Colar", 40],["Pulseira", 30]]
+        var produtos = [roupas, sapatos, acessorios, ""]
+        function sel(n){
+            document.querySelector(".res").innerHTML = "";
+            if (n <= 3){
+                produtos[n-1].forEach(item => {
+                    document.querySelector(".res").innerHTML += `<div class='sel' onclick="escolher('${item[0]}',${item[1]})">${item[0]}: R$${item[1]},00<div><br>`;
+                })
+            }
+
+        }
+        function escolher(item, preco){
+            switch(item){
+                case "Camisa social":
+                    document.querySelector(".roup").innerHTML = item+": R$"+preco+",00";
+                    roupa_p = preco;
+                break;
+                case "Calça jeans":
+                    document.querySelector(".roup").innerHTML = item+": R$"+preco+",00";
+                    roupa_p = preco;
+                break;
+                case "Moletom":
+                    document.querySelector(".roup").innerHTML = item+": R$"+preco+",00";
+                    roupa_p = preco;
+                break;
+                case "Tenis":
+                    document.querySelector(".calc").innerHTML = item+": R$"+preco+",00";
+                    sapato_p = preco;
+                break;
+                case "Sapato":
+                    document.querySelector(".calc").innerHTML = item+": R$"+preco+",00";
+                    sapato_p = preco;
+                break;
+                case "Chinelo":
+                    document.querySelector(".calc").innerHTML = item+": R$"+preco+",00";
+                    sapato_p = preco;
+                break;
+                case "Relógio":
+                    document.querySelector(".aces").innerHTML = item+": R$"+preco+",00";
+                    acesso_p = preco;
+                break;
+                case "Colar":
+                    document.querySelector(".aces").innerHTML = item+": R$"+preco+",00";
+                    acesso_p = preco;
+                break;
+                case "Pulseira":
+                    document.querySelector(".aces").innerHTML = item+": R$"+preco+",00";
+                    acesso_p = preco;
+                break;
+            }
+        }
+        function comprar(){
+            if (roupa_p && sapato_p && acesso_p){
+                alert("O total da compra, "+name+", foi: R$"+ (roupa_p+sapato_p+acesso_p) + ",00");
+                location.reload()
+            }else{
+                alert("Escolha um de cada item para finalizar a compra")
+            }
+        }
+    </script>
+</body>
+</html>

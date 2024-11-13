@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Elegância em Movimento</title>
+</head>
+<body>
+    <h1>Elabore um menu de vendas de peças de roupas, da maneira que desejar, incluindo peças femininas e masculinas, para cada compra a pessoa terá que escolher 2 peças no mínimo, após as escolhas exibir o total da compra junto com o nome e e-mail do comprador</h1>
+    <input type="checkbox" name="" id="item1">Camisa social R$ 179,99 <br>
+    <input type="checkbox" name="" id="item2">Calça social R$ 119,99<br>
+    <input type="checkbox" name="" id="item3">Terno azul marinho R$ 444,44<br>
+    <input type="checkbox" name="" id="item4">Terno cinza R$ 399,99 <br>
+    <input type="checkbox" name="" id="item5">Gravata borboleta vermelha R$ 34,99 <br>
+    <input type="checkbox" name="" id="item6">Gravata Clássica vermelha R$ 44,99 <br>
+    <input type="checkbox" name="" id="item7">Vestido Noiva R$ 599,99<br>
+    <input type="checkbox" name="" id="item8">Jaqueta vermelha feminina R$ 249,99<br>
+    <button onclick="compra()">Comprar</button>
+
+    <script>
+        var nome, email
+        nome = prompt("Digite seu nome")
+        email = prompt("Digite seu Email")
+        function compra(){
+            let lista = [document.getElementById("item1").checked,
+                        document.getElementById("item2").checked,
+                        document.getElementById("item3").checked,
+                        document.getElementById("item4").checked,
+                        document.getElementById("item5").checked,
+                        document.getElementById("item6").checked,
+                        document.getElementById("item7").checked,
+                        document.getElementById("item8").checked,
+        
+        ]
+        let prices = [179.99, 119.99, 444.44, 399.99, 34.99, 44.99, 599.99, 249.99]
+        let soma = 0
+        lista.forEach(item => {
+            soma += item
+        });
+        if (soma >= 2){
+            let price= 0;
+            for (let i = 0; i < lista.length; i++){
+                if (lista[i]){
+                    price += prices[i];
+                }
+            }
+            price = price.toFixed(2)
+            alert(`O nome é ${nome}, O email é ${email}, o total da compra é ${price}`)
+        }else{
+            alert("Escolha ao menos dois itens")
+        }
+
+
+        }
+
+    </script>
+</body>
+</html>

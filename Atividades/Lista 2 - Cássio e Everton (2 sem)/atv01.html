@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 | Cássio e Everton 😉</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>1. Crie um array bidimensional de 3 índices com 3 itens cada. Receba os valores de cada índice via prompt e no final exiba a tabela de valores digitada e a soma de todos os números.😉</h1>")
+
+        var arr = [
+            [Number(prompt("digite um valor")),Number(prompt("digite um valor")),Number(prompt("digite um valor"))],
+            [Number(prompt("digite um valor")),Number(prompt("digite um valor")),Number(prompt("digite um valor"))],
+            [Number(prompt("digite um valor")),Number(prompt("digite um valor")),Number(prompt("digite um valor"))]
+        ]
+        arr.forEach(linha =>{
+            linha.forEach(item=>{
+                document.write(item + ", ")
+            })
+            document.write("<br>")
+        })
+        let res = arr.reduce((soma, linha)=>{
+            return soma + linha.reduce((somaLinha, atual)=>{
+                return somaLinha + atual
+            })
+        }, 0)
+        document.write("A soma dos valores é " + res)
+    </script>
+</body>
+</html>

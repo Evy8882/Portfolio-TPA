@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Você é uma pessoa em vulnerabilidade?<br>
+    <input type="radio" name="vul" id="" value="nao">Não <br>
+    <input type="radio" name="vul" id="vul" value="sim">Sim <br><br>
+
+    Se tem filhos, quantos?
+    <input type="number" name="" id="filho" value="0" min="0"><br>
+
+    <button onclick="cal()">Calcular</button>
+    <script>
+        var sal = Number(prompt("Digite o seu salário"))
+        var dia = Number(prompt("Quantos dias você trabalha na semana?"))
+        var fal = Number(prompt("Quantos dias você faltou?"))
+        function cal(){
+            let filhos = Number(document.getElementById("filho").value);
+            let vul = document.getElementById("vul").checked;
+            //beneficios
+            let vr = (dia * 6/100 - fal*2 - (dia*25))
+            let vt = sal * 6/100;
+            let cb = sal* 40/100;
+            let foas = 1412*Number(vul);
+            let fgts = sal* 8/100;
+            let sf;
+            if (sal < 1819.26){
+                sf = 62.04*filhos;
+            }else{
+                sf = 0;
+            }
+
+            sal += vr+vt+cb+foas+fgts+sf;
+            document.write("Seu salário com os beneficios é: R$" + sal.toFixed(2))
+        }
+
+    </script>
+</body>
+</html>

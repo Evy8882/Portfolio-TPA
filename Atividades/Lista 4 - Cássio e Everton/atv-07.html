@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7 - Cassio e Everton</title>
+</head>
+<body>
+    <style>
+        select{
+            margin-bottom: 20px;
+        }
+    </style>
+    <h1>Atividade 7</h1>
+    1º aluno:
+    <select name="" id="sel1">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    2º aluno:
+    <select name="" id="sel2">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    3º aluno:
+    <select name="" id="sel3">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    4º aluno:
+    <select name="" id="sel4">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    5º aluno:
+    <select name="" id="sel5">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    6º aluno:
+    <select name="" id="sel6">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    7º aluno:
+    <select name="" id="sel7">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    8º aluno:
+    <select name="" id="sel8">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    9º aluno:
+    <select name="" id="sel9">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    10º aluno:
+    <select name="" id="sel10">
+        <option value="na">NA</option>
+        <option value="i">I</option>
+        <option value="r">R</option>
+        <option value="b">B</option>
+        <option value="mb">MB</option>
+    </select><br>
+    <button onclick="calc()">Verificar</button>
+    <hr>
+    <div class="result"></div>
+    <script>
+        function calc(){
+            let lista = []
+            for (i = 1; i <=10; i++){
+                lista.push(document.getElementById("sel"+i).value)
+            }
+            let ali = 0
+            let almb = 0;
+            for(i = 0; i < 10; i++){
+                if(lista[i] == "i"){
+                    ali++
+                }else if(lista[i] == "mb"){
+                    almb++
+                }
+            }
+            document.querySelector(".result").innerHTML = `${ali} alunos tiraram I <br> ${almb} tiraram MB`
+        }
+    </script>
+</body>
+</html>

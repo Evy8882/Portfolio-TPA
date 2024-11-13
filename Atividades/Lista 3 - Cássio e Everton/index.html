@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1 - lista 3 | Cássio e Everton</title>
+</head>
+<body>
+
+    <script>
+        var n1 = Number(prompt("Digite um número"))
+        var n2 = Number(prompt("Digite mais um número"))
+        var n3 = Number(prompt("Digite outro número"))
+
+        document.write(`${n1}, ${n2}, ${n3} <br><br>`)
+    </script>
+    <h1>1 - Receba três números e exiba as opções para o usuário escolher</h1>
+    <button onclick="somar()">Soma</button><br><br>
+    <button onclick="sub()">Subtração</button><br><br>
+    <button onclick="div()">Divisão</button><br><br>
+    <button onclick="mult()">Multiplicação</button><br><br>
+    <button onclick="expo()">Exponenciação do 2º com o 3º</button><br><br>
+    <a href="../../index.html"><button>Sair</button></a><br>
+    <a href="lista3-atv1.html">atv1</a>
+    <a href="lista3-atv2.html">atv2</a>
+    <a href="lista3-atv3.html">atv3</a>
+    <a href="Loja.html">loja</a>
+    <hr>
+    <div id="result"></div>
+
+    <script>
+        function somar() {
+            let soma = n1 + n2 + n3;
+            document.getElementById("result").innerHTML = "A soma é "+ soma
+        }
+        function sub() {
+            let sub = n1 - n2 - n3;
+            document.getElementById("result").innerHTML = "A subtração é "+ sub
+        }
+        function div() {
+            let div = n1 / n2 / n3;
+            document.getElementById("result").innerHTML = "A divisão é "+ div
+        }
+        function mult() {
+            let mult = n1 * n2 * n3;
+            document.getElementById("result").innerHTML = "A multiplicação é "+ mult
+        }
+        function expo() {
+            let expo = n2**n3;
+            document.getElementById("result").innerHTML = "A exponenciação é "+ expo
+        }
+    </script>
+</body>
+</html>

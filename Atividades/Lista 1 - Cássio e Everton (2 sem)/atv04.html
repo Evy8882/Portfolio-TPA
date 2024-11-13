@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4 - Cássio e Everton ✨</title>
+</head>
+<body>
+    <h1>Atividade 4 - Cássio e Everton ✨</h1>
+    <h2>4.	Receba 5 palavras em um vetor e exiba a quantidade de caracteres do maior elemento.</h2>
+    <script>
+        let VETOR = [
+            prompt("Digite uma palavra"),
+            prompt("Digite uma palavra"),
+            prompt("Digite uma palavra"),
+            prompt("Digite uma palavra"),
+            prompt("Digite uma palavra")
+        ]
+        let maior = VETOR[0];
+        VETOR.forEach(el=>{
+            if (el.length > maior.length){
+                maior = el;
+            }
+        })
+        document.write(`A maior palavra é ${maior}, com ${maior.length} caracteres`)
+    </script>
+<body>
+    
+</body>
+</html>

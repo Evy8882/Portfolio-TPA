@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 - Cássio e Everton ✨</title>
+</head>
+<body>
+    <h1>Atividade 3 - Cássio e Everton ✨</h1>
+    <h2>3.	Receba 5 números e exiba-os em ordem decrescente.</h2>
+    <script>
+        let VETOR = [
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número"))
+        ]
+        VETOR = VETOR.sort();
+        VETOR = VETOR.sort(()=>{ return -1 });
+
+        document.write(VETOR)
+    </script>
+</body>
+</html>

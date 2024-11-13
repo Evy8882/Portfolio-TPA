@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6 - Cássio e Everton ✨</title>
+</head>
+<body>
+    <h1>Atividade 6 - Cássio e Everton ✨</h1>
+    <h2>6.	Receba 3 números em um vetor, se a soma exceder 100, deve-se exibir o maior valor, do contrário exibe-se o menor valor.</h2>
+    <script>
+        const VETOR = [
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número")),
+            Number(prompt("Digite um número"))
+        ]
+        let soma = 0;
+        VETOR.forEach( (el) => {
+            soma += el;
+        } )
+        if (soma > 100){
+            let maior = VETOR[0];
+            VETOR.forEach(el=>{
+                if (el > maior){
+                    maior = el;
+                }
+            })
+            document.write(`O maior valor é ${maior}`);
+        }else{
+            let menor = VETOR[0];
+            VETOR.forEach(el=>{
+                if (el < menor){
+                    menor = el;
+                }
+            })
+            document.write(`O menor valor é ${menor}`);
+            
+        }
+    </script>
+</body>
+</html>

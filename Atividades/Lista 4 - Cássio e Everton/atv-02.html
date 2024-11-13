@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - Cassio e Everton</title>
+</head>
+<body>
+    <h1>Atividade 2</h1>
+    <label for="l1">Primeiro Lado: </label>
+    <input type="number" id="l1" placeholder="Digite o tamanho em cm"><br>
+    <label for="l2">Segundo Lado: </label>
+    <input type="number" id="l2" placeholder="Digite o tamanho em cm"><br>
+    <label for="l3">Terceiro Lado: </label>
+    <input type="number" id="l3" placeholder="Digite o tamanho em cm"><br>
+    <button onclick="calc()">Calcular</button>
+    <hr>
+    <div class="result"></div>
+    <script>
+        var calc = () => {
+            let l1 = Number(document.getElementById('l1').value);
+            let l2 = Number(document.getElementById('l2').value);
+            let l3 = Number(document.getElementById('l3').value);
+            let res = document.querySelector(".result")
+
+            if (l1 + l2 > l3 && l1 + l3 > l2 && l2 + l3 > l1){
+                if (l1 == l2 && l2 == l3){
+                    res.innerHTML = "Equilátero"
+                }else if (l1 == l2 || l2 == l3 || l3 == l1){
+                    res.innerHTML = "Isóceles"
+                }else{
+                    res.innerHTML = "Escaleno"
+                }
+            }else {
+                res.innerHTML = "<div style='color: red'>Triangulo Inválido</div>"
+            }
+        }
+    </script>
+</body>
+</html>

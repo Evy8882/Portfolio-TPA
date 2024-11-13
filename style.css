@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    border: 2px solid black;
+    width: 80%;
+    min-height: 340px;
+    display: flex;
+    padding: 12px;
+    margin: 40px auto;
+    gap: 2%;
+    align-items: center;
+}
+header img{
+    height: 250px;
+    width: 200px;
+    object-fit: cover;
+}
+header section{
+    height: 250px;
+    max-width: 350px;
+}
+.bim-container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-around;
+    background-color: #ddd;
+    margin-bottom: 40px;
+}
+.bim{
+    min-height: 300px;
+    width: 20%;
+    border: 2px solid black;
+    text-align: center;
+}
+main h2{
+    text-align: center;
+}
+.atividade{
+    width: 80%;
+    height: 32px;
+    margin: 12px auto;
+    box-shadow: 0 2px 4px black;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 200ms;
+}
+.atividade:hover{
+    transform: scale(1.1);
+}
+body{
+    background-color: #ddd;
+}
+div,section, header{
+    background-color: white;
+}
+@media screen and (max-width: 660px) {
+    header{
+        flex-direction: column;
+    }
+}
